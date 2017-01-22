@@ -6,10 +6,10 @@ print (data)
 #   Połączenie i tworzenie tabel
 def dbconnanddotables():
 
-    db = mariadb.connect(host="juchnicki.pl",  # your host, usually localhost
-                         user="python",  # your username
-                         passwd="testpy",  # your password
-                         db="python")  # name of the data base
+    db = mariadb.connect(host="juchnicki.pl", 
+                         user="python",  
+                         passwd="testpy",  
+                         db="python") 
 
     cursor = db.cursor()
 
@@ -28,7 +28,7 @@ def dbconnanddotables():
 
                     """)
 
-    # disconnect from server
+    # DC
     db.close()
 
 #   dodawanie wpisow do tabeli
@@ -39,10 +39,10 @@ def addcomment(Name, Surname, Comments, Email):
     Email = input("Podaj e-mail: ")
 
 
-    db = mariadb.connect(host="juchnicki.pl",  # your host, usually localhost
-                         user="python",  # your username
-                         passwd="testpy",  # your password
-                         db="python")  # name of the data base
+    db = mariadb.connect(host="juchnicki.pl",  
+                         user="python",  
+                         passwd="testpy", 
+                         db="python") 
 
     cursor = db.cursor()
 
@@ -60,23 +60,23 @@ def addcomment(Name, Surname, Comments, Email):
         # tu dodaje
         db.commit()
     except:
-        # Rollback in case there is any error
+       
         db.rollback()
 
-    # disconnect from server
+  
     db.close()
 
 def remove():
-    db = mariadb.connect(host="juchnicki.pl",  # your host, usually localhost
-                         user="python",  # your username
-                         passwd="testpy",  # your password
-                         db="python")  # name of the data base
+    db = mariadb.connect(host="juchnicki.pl", 
+                         user="python",  
+                         passwd="testpy",
+                         db="python")  
     cursor = db.cursor()
     sql = "SELECT * FROM baza"
     try:
-        # Execute the SQL command
+        
         cursor.execute(sql)
-        # Fetch all the rows in a list of lists.
+       
         results = cursor.fetchall()
         for row in results:
             NrID = row[0]
@@ -115,19 +115,19 @@ def remove():
 
 #   pokaz komentarze
 def showcomments():
-    db = mariadb.connect(host="juchnicki.pl",  # your host, usually localhost
-                         user="python",  # your username
-                         passwd="testpy",  # your password
-                         db="python")  # name of the data base
+    db = mariadb.connect(host="juchnicki.pl",  
+                         user="python", 
+                         passwd="testpy", 
+                         db="python") 
 
 
     cursor = db.cursor()
-    # Prepare SQL query to INSERT a record into the database.
+    
     sql = "SELECT * FROM baza"
     try:
-        # Execute the SQL command
+       
         cursor.execute(sql)
-        # Fetch all the rows in a list of lists.
+        
         results = cursor.fetchall()
         for row in results:
             NrID = row[0]
@@ -143,7 +143,7 @@ def showcomments():
     except:
             print("Nie tyra")
 
-    # disconnect from server
+   
     db.close()
 
 #   MENU
