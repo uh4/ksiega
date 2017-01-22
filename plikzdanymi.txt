@@ -1,0 +1,22 @@
+Adres pliku <_io.TextIOWrapper name='plikzdanymi.txt' mode='a+' encoding='cp1250'> z dnia 2016-11-27 21:10:32.414011.
+Imiê: seba
+Nazwisko: sena
+Uwagi: dobra
+
+Adres pliku <_io.TextIOWrapper name='plikzdanymi.txt' mode='a+' encoding='cp1250'> z dnia 2016-11-28 11:33:06.897341.
+Imiê: seba
+Nazwisko: j
+Uwagi: ok
+
+Adres pliku <_io.TextIOWrapper name='plikzdanymi.txt' mode='a+' encoding='cp1250'> z dnia 2016-11-28 11:33:24.862005.
+Imiê: q
+Nazwisko: q
+Uwagi: q
+
+Adres pliku <_io.TextIOWrapper name='plikzdanymi.txt' mode='a+' encoding='cp1250'> z dnia 2016-11-28 11:45:21.253797.
+Imiê: asd
+Nazwisko: asd
+Uwagi: asd
+E-mail: asd@asd.pl
+
+
